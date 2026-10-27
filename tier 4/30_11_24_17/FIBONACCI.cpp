@@ -18,7 +18,7 @@ int main(){
 	cin >> n;
 	vector<int> fibo(n + 2,1);
 	for(int i = 2 ; i <= n ; i++){
-		fibo[i] = (fibo[i - 1] + fibo[i - 2])%mod;	
+		fibo[i] = fibo[i - 1] %mod + fibo[i - 2]%mod;	
 	}
 	cout << fibo[n - 1];
 	return 0;

@@ -12,8 +12,8 @@ int main() {
     cin.tie(nullptr);
     cout.tie(nullptr);
 
-    freopen(BL".INP", "r", stdin);
-    freopen(BL".OUT", "w", stdout);
+    //freopen(BL".INP", "r", stdin);
+    //freopen(BL".OUT", "w", stdout);
 
     int n;
     string a;

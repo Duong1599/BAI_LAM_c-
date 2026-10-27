@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 #define ll long long
 #define el "\n"
-#define bl "WATERFILL"
+#define bl "CWORD"
 using namespace std;
 
 void vo(){
@@ -13,7 +13,7 @@ int main(){
 	cin.tie(nullptr);
 	cout.tie(nullptr);
 	ios_base::sync_with_stdio(false);
-	vo();
+	//vo();
 	int n,k,sum;
 	cin >> n >> k;
 	int t = n;

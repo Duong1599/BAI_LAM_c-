@@ -1,27 +1,27 @@
 #include <bits/stdc++.h>
-#define ll long long
+#pragma GCC optimize ("Ofast")
+#pragma GCC optimize ("unroll-loops")
+#define VO "COUNTSQ"
 #define el "\n"
-#define vo "BAI1"
+#define fi first
+#define se second
+#define ll long long
 using namespace std;
 void bl(){
-    freopen(vo".INP","r",stdin);
-    freopen(vo".OUT","w",stdout);
-}
-bool check(int x){
-    int k = sqrt(x);
-    return k * k == x;
+	freopen(VO".INP","r",stdin);
+    freopen(VO".OUT","w",stdout);
 }
 int main(){
     cin.tie(nullptr);
     cout.tie(nullptr);
     ios_base::sync_with_stdio(false);
-	//bl();
+    bl();
 	int n;
-    cin >> n;
-    while(n--){
-        int x;
-        cin >> x;
-        cout << (int)sqrt(x) << el;
-    }
-    return 0;
+	cin >> n;
+	while (n--){
+		int x;
+		cin >> x;
+		cout << (int)sqrt(x) << el;
+	}
+	return 0;
 }

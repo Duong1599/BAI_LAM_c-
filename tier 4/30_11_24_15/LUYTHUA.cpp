@@ -1,24 +1,24 @@
-#pragma GCC optimize ("Ofast")
 #include <bits/stdc++.h>
-#define BL "LUYTHUA"
+#pragma GCC optimize ("Ofast")
+//#pragma GCC optimize ("unroll-loop")
+#define VO "BTL1"
 #define el "\n"
-#define ll long long
-
 using namespace std;
 
-int main() {
+int main(){
 
-    ios_base::sync_with_stdio(false);
     cin.tie(nullptr);
     cout.tie(nullptr);
+    ios_base::sync_with_stdio(false);
+    //freopen(VO".INP","r",stdin);
+    //freopen(VO".OUT","w",stdout);
 
-    freopen(BL".INP", "r", stdin);
-    freopen(BL".OUT", "w", stdout);
-
-    int a,n,d;
-    cin >> a >> n >> d;
-    signed long long su=1;
-    for(int i = 1 ; i <= n ; i++) su += pow(a,d*i);
-    cout << su;
-    return 0;
+    int n,a,d;
+    signed long long al =1;
+    cin >> a >> n >>d;
+    for(int i = 1 ; i <= n ; i++){
+    	al += (unsigned long long) pow(a,i*d);;
+	}
+	cout << al;
+	return 0;
 }

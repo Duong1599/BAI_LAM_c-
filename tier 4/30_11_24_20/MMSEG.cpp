@@ -1,29 +1,33 @@
 #include <bits/stdc++.h>
-#define ll long long
-#define vo "MMSEG"
+#pragma GCC optimize ("Ofast")
+#pragma GCC optimize ("unroll-loops")
+#define VO "HVAPPLE"
 #define el "\n"
+#define fi first
+#define se second
+#define ll long long
 using namespace std;
-void bl (){
-    freopen(vo".INP","r",stdin);
-    freopen(vo".OUT","w",stdout);
+void bl(){
+	freopen(VO".INP","r",stdin);
+    freopen(VO".OUT","w",stdout);
 }
 int main(){
     cin.tie(nullptr);
     cout.tie(nullptr);
     ios_base::sync_with_stdio(false);
     bl();
-    int n;
-    cin >> n;
-    vector<int> vt(n);
-    for(int &x : vt) cin >> x;
-    int mn = *min_element(vt.begin(),vt.end());
-    int mx = *max_element(vt.begin(),vt.end());
-    int pmn=-1,pmx=-1,re=INT_MAX;
-    for(int i = 0 ; i < n ; i++){
-        if(vt[i] == mn) pmn = i;
-        if(vt[i] == mx) pmx = i;
-        if(pmn != -1 && pmx != -1 ) re = min(re,abs(pmn-pmx) + 1);
-    }
-    cout << re << el;
-    return 0;
+	int n;
+	cin >> n;
+	vector<int> vt(n);
+	for(int &x : vt) cin >> x;
+	int mn = *min_element(vt.begin(),vt.end());
+	int mx = *max_element(vt.begin(),vt.end());
+	int pmn=-1,pmx=-1,re=1;
+	for(int i = 0 ; i < n ; i++){
+		if(vt[i]==mn) pmn = i;
+		if(vt[i]==mx) pmx = i;
+		if(pmn != -1 && pmx != -1) re = min(re,abs(pmn-pmx) + 1);
+	}
+	cout << re;
+	return 0;
 }
