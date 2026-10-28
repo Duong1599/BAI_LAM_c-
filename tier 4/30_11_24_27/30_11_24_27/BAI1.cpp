@@ -18,6 +18,20 @@ int main(){
     cin >> n;
     vector<int> vt(n);
     for(int &x : vt) cin >> x;
+    int mn = *min_element(vt.begin(),vt.end());
+    int x = 0,y = 0,z = 0;
+    for(int t : vt) if(t == mn) x++;
+    for(int i = 0 ; i < n - 1 ; i++){
+        if(vt[i] < vt[i+1]){
+            if(i == 0|| vt[i - 1]>=vt[i]) y++;
+        }else if(vt[i] > vt[i+1]){
+            if(i == 0|| vt[i - 1]<=vt[i]) z++;
+        }
+    }
+    cout << x << ' ' << y << ' ' << z;
+    return 0;
+}
+/*
     int mx = *max_element(vt.begin(),vt.end());
     int mn = *min_element(vt.begin(),vt.end());
     int x = 0,y = 0,z = 0,tmp =0;
@@ -43,5 +57,4 @@ int main(){
     }
     cout << x << ' ' << y <<' '<< z << el;
 
-    return 0;
-}
+*/
